@@ -2,3 +2,58 @@ https://umaar.com/dev-tips/
 https://juejin.im/post/5a37b2f56fb9a0451e3fe73d
 https://juejin.im/entry/5804669f570c35006c828548
 https://juejin.im/post/5a0914845188252abc5ddaee
+
+Elements
+进入：
+Cmd + Alt + c inspect，点击想观察的节点
+console中inspect(DOM)，DOM为想观察的节点。
+
+
+遍历节点：
+鼠标点击
+在DOM节点中，上下箭头跳转，向右箭头，展开折叠的节点。向左箭头，折叠打开的节点。
+
+
+编辑节点   F2 -> Edit as HTML. ctrl+enter保存更改，Esc退出更改，不保存.
+编辑 DOM 节点名称或属性
+直接在节点名或属性上双击
+选中突出节点，Enter,然后Tab选择.
+右键,Edit/Add Attribute.
+
+
+点击并拖动,可以移动DOM节点.
+右键->Scroll into view,滚动页面使节点在视口中显示.
+断点调试
+
+右键节点->break on，可以对该节点的子树修改、属性修改、节点移除三种事件添加断点
+右侧DOM Breakpoints,管理DOM断点.
+Event Listener
+Ancestors 显示祖先节点的事件侦听器。
+每个Event Listener包含两个属性
+handler, 右键 -> Show Function Definition
+useCapture, addEventListener函数中useCapture的值(bool).
+Framework listeners, 框架事件监听器. 
+
+
+
+
+
+
+Styles，位于面板左侧，主要是样式相关内容
+
+页面底端的Computed 可以编辑，修改。
+点击Styles中的文件名->跳转到Source->右键，Local Modifications.
+Inherited from <NODE>,点击<NODE>可以跳转到该DOM节点。
+灰色条目不是已定义规则，而是在运行时计算的规则。
+鼠标悬停在 CSS 选择器上可以查看受该选择器影响的所有元素。
+点击右上角.cls,可以查看、增加、删除class。
+点击(并长按)右上角+按钮，(选择要向哪一个样式表)添加一个新的 CSS 规则。
+点击右上角:hov，或在元素上点击右键，启用/删除伪类。
+点击css属性进行修改，tab跳转；Alt/ /Shift/Shift+Fn + 上/下，增减0.1,1,10,100。
+鼠标悬停到样式表上面，此时右下角出现三个点，移动过去，此时有color,background-color等快捷方式。
+点击color声明左侧带颜色的小正方形，打开color-picker。
+
+作者：张伟杰
+链接：https://juejin.im/post/5a0914845188252abc5ddaee
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

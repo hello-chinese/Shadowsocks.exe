@@ -17,6 +17,12 @@ https://juejin.im/post/5901e8d6a0bb9f0065e64f63   ---->前端调试技巧与诀�
 https://umaar.github.io/devtools-talk-2017/#/26   ---->chrome幻灯片
 https://umaar.com/dev-tips/121-css-coverage/      ---->css使用率
 
+console
+设置：Hide network — 隐藏诸如 404 之类的网络错误。
+Preserve log — 控制台将会在页面刷新或者跳转时不清空记录。
+Selected context only — 勾上后可以根据前面 top 选择的上下文来指定控制台的日志记录范围。
+User messages only — 隐藏浏览器产生的访问异常之类的警告。Log XMLHttpRequests — 顾名思义，记录 XMLHttpRequest 产生的信息。
+Show timestamps — 在控制台中显示时间戳信息。Autocomplete from history — Chrome 会记录你曾经输入过的命令，进行自动补全
 
 Elements
 进入：
@@ -68,7 +74,3 @@ Inherited from <NODE>,点击<NODE>可以跳转到该DOM节点。
 鼠标悬停到样式表上面，此时右下角出现三个点，移动过去，此时有color,background-color等快捷方式。
 点击color声明左侧带颜色的小正方形，打开color-picker。
 
-作者：张伟杰
-链接：https://juejin.im/post/5a0914845188252abc5ddaee
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

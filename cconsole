@@ -116,4 +116,67 @@ console.log('%c Truly hackers code! ', 'background: #222; color: #bada55');
 %O — 可展开的 JS 对象
 %c — 使用 CSS 格式化输出
 
+----------------------------------------------------------------------------------------------------------------
+trl + L/ clear() /console.clear() 清空console.
+右键 -> Save As 保存console输出.
+日志组按组输出,可嵌套:  console.group("Group Name")
+  console.groupCollapsed("Group Name")//默认折叠
+  console.groupEnd()
+计时器,时间戳,在Timeline上有标注  console.time("name");
+  console.timeEnd("name");
+  // 向Timeline添加一个标记
+  console.timeStamp("Adding result");
+断言,在console中可跳转到代码对应位置.  console.assert(a < 500, "a > 500!");
+堆栈追踪&&错误处理  // 追踪堆栈
+  try {
+      // some code here
+  } cache(e) {
+      console.log(e.stack);
+  }
+  // 打印跟踪调用栈
+  console.trace();
+  // 处理运行时异常
+  window.onerror = function(message, url, line){
+      console.log("window.onerror was invoked with message = " + message + ", url = " + url + ", line = " + line);
+  }
+字符串替换 %s %d %f %o(DOM节点) %O(js对象) %c 样式。不过有了ES6以后，推荐使用更加方便、灵活的模板字符串
+添加cpu配置文件.将会添加到Profiles面板中  console.profile("label");
+  console.profileEnd();
+其他特殊用法
+  // DOM元素格式化为JS对象
+  console.dir(document.body);
+  // 输出object子级元素xml
+  console.dirxml(object);
 
+  // 将Object,Array输出
+  console.table([{a:1, b:2, c:3}, {a:"foo", b:false, c:undefined}]);
+  console.table([[1,2,3], [2,3,4]]);
+  console.table(family, ["firstName", "lastName", "age"]);
+
+  // 记录相同字符串传入的次数(多用于统计函数调用次数)
+  console.count("Login called for user " + user);Command Line API
+↑ / ↓切换查看表达式 
+
+选择元素
+$('code') // document.querySelector()
+$$('figure') // document.querySelectorAll()
+$x('html/body/p') // 返回与指定xpath匹配的数组元素
+$0 - 4 // 返回最近访问过的5个元素,$0为最新的一个
+监听事件, 查看时间监听器(Elements->Event Listener中也可以查看)
+monitorEvents(document.body, "click"); // 监听事件
+unmonitorEvents(document.body); // 取消监听
+getEventListeners(document); // 返回在指定对象上注册的事件侦听器
+复制:将指定对象的字符串表示形式复制到剪贴板.
+copy(object);
+copy($0);
+调试函数
+debug(fn); // 调用fn时开始调试
+undebug(fn); // 停止调试
+
+monitor(function); // console中将输出函数调用,以及传入的参数
+unmonitor(function); // 停止监控
+在Elements中打开指定元素/对象/函数.inspect(DOM);
+inspect(object/function);
+查看对象keys(object);
+values(object);
+------------------------------------------------------------------------------------------------------------------------

@@ -17,6 +17,9 @@ https://juejin.im/post/5901e8d6a0bb9f0065e64f63   ---->前端调试技巧与诀�
 https://umaar.github.io/devtools-talk-2017/#/26   ---->chrome幻灯片
 https://umaar.com/dev-tips/121-css-coverage/      ---->css使用率
 
+show Performance monitor  frames指的是Document Frames 不是每秒帧数
+FPS来监控每秒帧数
+
 console
 设置：Hide network — 隐藏诸如 404 之类的网络错误。
 Preserve log — 控制台将会在页面刷新或者跳转时不清空记录。

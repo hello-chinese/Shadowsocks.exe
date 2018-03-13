@@ -1,0 +1,119 @@
+console
+设置：
+Hide network — 隐藏诸如 404 之类的网络错误。
+Preserve log — 控制台将会在页面刷新或者跳转时不清空记录。
+Selected context only — 勾上后可以根据前面 top 选择的上下文来指定控制台的日志记录范围。
+User messages only — 隐藏浏览器产生的访问异常之类的警告。
+Log XMLHttpRequests — 顾名思义，记录 XMLHttpRequest 产生的信息。
+Show timestamps — 在控制台中显示时间戳信息。
+Autocomplete from history — Chrome 会记录你曾经输入过的命令，进行自动补全
+
+清空 console 控制台(Ctrl + l) 鼠标右键clear consolelog
+2.
+top — 在默认状态下，Console 的上下文（context）为 top（顶级）。
+不过当你检查元素或使用 Chrome 插件上下文时，它会发生变化。
+你可以在此更改 console 执行的上下文（页面的顶级 frame）。
+
+3.console.assert(expression, message)
+
+如果 expression 表达式的结果为 false，Console.assert 将会抛出错误。
+关键的是，assert 函数不会由于报错而停止评估之后的代码。
+它可以帮助你调试冗长棘手的代码，或者找到多次迭代后函数自身产生的错误。
+`
+function callAssert(a,b) {
+  console.assert(a === b, 'message: a !== b ***** a: ' + a +' b:' +b);
+}
+callAssert(5,6);
+callAssert(1,1);
+`
+4.console.count(label)
+
+简而言之，它就是一个会计算相同表达式执行过多少次的 console.log。其它的都一样。
+for(var i =0; i <=3; i++){
+    console.count(i + ' Can I go with you?');
+    console.count('No, no this time');
+}
+
+5.console.table()
+
+很好用的调试函数，但即使它会提高工作效率，我也一般懒得用它…… 别像我这样，咱要保持高效
+var fruits = [
+  { name: 'apple', like: true },
+  { name: 'pear', like: true },
+  { name: 'plum', like: false },
+];
+console.table(fruits);
+console.table(fruits, ['name']) 比起console.log(fruits, ['name'])更加明显，通过talbe是可以进行排序的
+我们可以决定是完全展示数据内容还是只展示整个对象的某几列。这个表格是可排序的 —— 点击需要排序的列的表头，即可按此列对表格进行排序。
+
+6.console.group() / console.groupEnd();
+
+这次让我们直接从代码开始介绍。运行下面的代码看看控制台是如何进行分组的。
+console.log('iteration');
+for(var firstLevel = 0; firstLevel<2; firstLevel++){
+  console.group('First level: ', firstLevel);
+  for(var secondLevel = 0; secondLevel<2; secondLevel++){
+    console.group('Second level: ', secondLevel);
+    for(var thirdLevel = 0; thirdLevel<2; thirdLevel++){
+      console.log('This is third level number: ', thirdLevel);
+    }
+    console.groupEnd();
+  }
+  console.groupEnd();
+}
+
+7.console.trace();
+
+console.trace 会将调用栈打印在控制台中。如果你正在构建库或框架时，它给出的信息将十分有用。
+
+function func1() {
+  func2();
+}
+function func2() {
+  func3();
+}
+function func3() {
+  console.trace();
+}
+func1();
+
+8.log和dir的区别
+对比 console.log 与 console.dir
+译注：console.dir 会详细打印一个对象的所有属性与方法。
+
+9.$序号
+$_, $0 — $4
+
+$_ 会返回最近执行表达式的值。
+$0 — $4 — 分别作为近 5 此检查元素时对 HTML 元素的引用。
+
+10.返回该DOM元素上的事件监听器
+getEventListeners(object)
+
+返回指定 DOM 元素上注册的事件监听器。这儿还有一种更便捷的方法来设置事件监听
+
+11.monitorEvents(DOMElement, [events]) / unmonitorEvents(DOMElement)
+
+12.在控制台中选择元素
+在指定 DOM 元素上触发任何事件时，都可以在控制台中看到相关信息。直到取消对相应元素的监视。
+
+在 Element 标签中按 ESC 键展开这个界面。
+在 $ 没有另做它用的情况下：
+$() — 相当于 **document.querySelector()**。它会返回匹配 CSS 选择器的第一个元素（例如 $('span') 会返回第一个 span）$$() — 相当于 **document.querySelectorAll()**。它会以数组的形式返回所有匹配 CSS 选择器的元素。
+
+13 copy
+复制打印的数据有时，当你处理数据时可能会想打个草稿，或者简单地看看两个对象是否有区别。全选之后再复制可能会很麻烦，在此介绍一种很方便的方法。
+在打印出的对象上点击右键，选择 copy（复制），或选择 Store as global element（将指定元素的引用存储在全局作用域中），然后你就可以在控制台中操作刚才存储的元素啦。
+控制台中的任何内容都可以通过使用 copy('object-name') 进行复制。
+
+14.自定义控制台输出样式
+假设你正在开发一个库，或者在为公司、团队开发一个大模块。此时在开发模式下对一些日志进行高亮处理会很舒爽。你可以试试下面的代码：
+console.log('%c Truly hackers code! ', 'background: #222; color: #bada55');
+
+%d 或 %i — 整型值
+%f — 浮点值
+%o — 可展开的 DOM 元素
+%O — 可展开的 JS 对象
+%c — 使用 CSS 格式化输出
+
+

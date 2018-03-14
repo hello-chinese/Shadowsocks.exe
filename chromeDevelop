@@ -16,7 +16,7 @@ https://juejin.im/post/5a08087f6fb9a04529363d71   ---->前端 Console 调试小�
 https://juejin.im/post/5901e8d6a0bb9f0065e64f63   ---->前端调试技巧与诀窍
 https://umaar.github.io/devtools-talk-2017/#/26   ---->chrome幻灯片
 https://umaar.com/dev-tips/121-css-coverage/      ---->css使用率
-
+https://googlechrome.github.io/devtools-samples/jank/
 show Performance monitor  frames指的是Document Frames 不是每秒帧数
 FPS来监控每秒帧数
 

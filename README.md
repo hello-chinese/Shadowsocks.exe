@@ -5,4 +5,4 @@ http://www.ishadowsocks.org/
 http://freevpnss.cc/#vpn
 
 25号来
-5.6是上班的最后一天
+5.18是上班的最后一天

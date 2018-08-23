@@ -1,0 +1,23 @@
+DOM
+  offsetWidth  width+padding+border+scroll
+  clientWidth  width+padding
+  scrollwidth  不存在scroll和clientWidth相同.存在scroll：子元素长度+padding
+  
+  em            单位基于使用他们元素的字体大小,受父元素限制
+  rem           单位基于html元素的字体大小
+  vmax          单位基于视口的的宽度或高度中较大的那个,其中最大的那个被均分为100单位的vmax
+  vmin          单位基于视口的的宽度或高度中较小的那个,其中最小的那个被均分为100单位的vmin          
+  vw            单位基于视口的宽度，均分为100份
+  vh            单位基于视口的高度，均分为100份
+
+JS
+
+Array
+
+forEach
+Map
+filter
+some
+every
+
+

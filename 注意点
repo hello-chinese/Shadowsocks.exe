@@ -13,11 +13,37 @@ DOM
 JS
 
 Array
+---ES5
 
-forEach
-Map
-filter
-some
-every
+forEach        遍历数组
+map            对数组每一项进行处理，返回一个新数组
+filter         过滤原始数组，返回新数组
+some           数组中某一个符合条件，即为true
+every          数组中每一项都符合条件，即为true
+reduce         对数组进行累计处理,合并为一个值
+reduceRight    从右至左
+----ES6
 
+find           用于找出第一个符合条件的数组成员，并返回该成员，如果没有符合条件的成员，则返回undefined。
+findIndex      返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。               这两个方法都可以识别NaN,弥补了indexOf的不足.
+keys        
+values 
+entries
+             for (let index of ['a', 'b'].keys()) {
+                  console.log(index);
+                }
+                // 0
+                // 1
+
+                for (let elem of ['a', 'b'].values()) {
+                  console.log(elem);
+                }
+                // 'a'
+                // 'b'
+
+                for (let [index, elem] of ['a', 'b'].entries()) {
+                  console.log(index, elem);
+                }
+                // 0 "a"
+                // 1 "b"
 

@@ -13,6 +13,9 @@ DOM
 JS
 
 Array
+
+sort          排序  (a,b) => a-b 从小到大   (a,b) => b-a 从大到小
+
 ---ES5
 
 forEach        遍历数组

@@ -25,6 +25,7 @@ some           数组中某一个符合条件，即为true
 every          数组中每一项都符合条件，即为true
 reduce         对数组进行累计处理,合并为一个值
 reduceRight    从右至左
+
 ----ES6
 
 find           用于找出第一个符合条件的数组成员，并返回该成员，如果没有符合条件的成员，则返回undefined。
@@ -50,3 +51,9 @@ entries
                 // 0 "a"
                 // 1 "b"
 
+----ES7
+includes       查找数组是否包含某个元素 返回布尔。为弥补indexOf
+               includes方法是为了弥补indexOf方法的缺陷而出现的:
+
+                indexOf方法不能识别NaN
+                indexOf方法检查是否包含某个值不够语义化，需要判断是否不等于-1，表达不够直观

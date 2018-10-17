@@ -59,3 +59,4 @@ includes       查找数组是否包含某个元素 返回布尔。为弥补inde
                 indexOf方法检查是否包含某个值不够语义化，需要判断是否不等于-1，表达不够直观
                 
  Promise.all    接受的参数promise的数组,按照顺序发起，异步执行，不阻塞，其结果还是按照顺序映射到resultList中
+                promise数组中任何一个promise为reject的话，则整个Promise.all调用会立即终止，并返回一个reject的新的promise对象

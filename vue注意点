@@ -1,0 +1,4 @@
+模块name使用方向
+1.模块本身，可通过kebab-case格式，调用自己。用于递归
+2.keep-alive中exclude、include中使用的是模块name
+3.vue-devtools调试通过name寻找
